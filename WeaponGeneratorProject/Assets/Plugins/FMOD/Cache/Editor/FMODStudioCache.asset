@@ -1,0 +1,387 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8856633630451162083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/portfolio1/Build/Desktop/Player.bank
+  Name: Player
+  StudioPath: bank:/Player
+  lastModified: 637812607068218640
+  FileSizes:
+  - Name: Desktop
+    Value: 76672
+  Exists: 1
+--- !u!114 &-6121214563597253544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapon/Rifle/RifleShot
+  m_EditorClassIdentifier: 
+  Path: event:/Weapon/Rifle/RifleShot
+  Guid:
+    Data1: 252117256
+    Data2: 1186804193
+    Data3: 282409862
+    Data4: 1858992218
+  Banks:
+  - {fileID: -1526987053754343788}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5969617449086353747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/portfolio1/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637812607065811046
+  FileSizes:
+  - Name: Desktop
+    Value: 1402
+  Exists: 1
+--- !u!114 &-4408336803699904458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapon/Rifle/RifleReload
+  m_EditorClassIdentifier: 
+  Path: event:/Weapon/Rifle/RifleReload
+  Guid:
+    Data1: -1432542038
+    Data2: 1155971246
+    Data3: 1920348315
+    Data4: 709955556
+  Banks:
+  - {fileID: -1526987053754343788}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2202948561568153947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapon/Sniper/SniperReload
+  m_EditorClassIdentifier: 
+  Path: event:/Weapon/Sniper/SniperReload
+  Guid:
+    Data1: 1822732407
+    Data2: 1308481322
+    Data3: 1144515467
+    Data4: -1152337894
+  Banks:
+  - {fileID: -1526987053754343788}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2047849241609077507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/portfolio1/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637812607065781054
+  FileSizes:
+  - Name: Desktop
+    Value: 1340
+  Exists: 1
+--- !u!114 &-1526987053754343788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Weapon.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/portfolio1/Build/Desktop/Weapon.bank
+  Name: Weapon
+  StudioPath: bank:/Weapon
+  lastModified: 637812607069857074
+  FileSizes:
+  - Name: Desktop
+    Value: 174720
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -5969617449086353747}
+  - {fileID: -2047849241609077507}
+  - {fileID: -8856633630451162083}
+  - {fileID: -1526987053754343788}
+  EditorEvents:
+  - {fileID: 2201186891456491609}
+  - {fileID: -6121214563597253544}
+  - {fileID: -4408336803699904458}
+  - {fileID: 7990218814391714083}
+  - {fileID: 5622860377203794444}
+  - {fileID: 5860286525402749713}
+  - {fileID: 3793660077800274609}
+  - {fileID: 227842434538448266}
+  - {fileID: -2202948561568153947}
+  - {fileID: 4646296186377753616}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -2047849241609077507}
+  StringsBanks:
+  - {fileID: -5969617449086353747}
+  cacheTime: 637812607069857074
+  cacheVersion: 10
+--- !u!114 &227842434538448266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapon/Shotgun/ShotgunReload
+  m_EditorClassIdentifier: 
+  Path: event:/Weapon/Shotgun/ShotgunReload
+  Guid:
+    Data1: 332615520
+    Data2: 1312228408
+    Data3: 936586884
+    Data4: 1183066864
+  Banks:
+  - {fileID: -1526987053754343788}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2201186891456491609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapon/Pistol/PistolShoot
+  m_EditorClassIdentifier: 
+  Path: event:/Weapon/Pistol/PistolShoot
+  Guid:
+    Data1: -1369697849
+    Data2: 1246434774
+    Data3: 307996344
+    Data4: 765537160
+  Banks:
+  - {fileID: -1526987053754343788}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3793660077800274609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapon/Sniper/SniperShot
+  m_EditorClassIdentifier: 
+  Path: event:/Weapon/Sniper/SniperShot
+  Guid:
+    Data1: 362003242
+    Data2: 1136789179
+    Data3: -57098061
+    Data4: 1237891903
+  Banks:
+  - {fileID: -1526987053754343788}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4646296186377753616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapon/Shotgun/ShotgunShot
+  m_EditorClassIdentifier: 
+  Path: event:/Weapon/Shotgun/ShotgunShot
+  Guid:
+    Data1: -1949881668
+    Data2: 1098831074
+    Data3: 223350689
+    Data4: 1460649345
+  Banks:
+  - {fileID: -1526987053754343788}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5622860377203794444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/FootStepsRun
+  m_EditorClassIdentifier: 
+  Path: event:/Player/FootStepsRun
+  Guid:
+    Data1: -630880984
+    Data2: 1106752423
+    Data3: 49979292
+    Data4: 756890295
+  Banks:
+  - {fileID: -8856633630451162083}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 325
+--- !u!114 &5860286525402749713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/FootStepsWalk
+  m_EditorClassIdentifier: 
+  Path: event:/Player/FootStepsWalk
+  Guid:
+    Data1: 1412056775
+    Data2: 1179263475
+    Data3: 27989432
+    Data4: -1528284856
+  Banks:
+  - {fileID: -8856633630451162083}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 483
+--- !u!114 &7990218814391714083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapon/Pistol/PistolReload
+  m_EditorClassIdentifier: 
+  Path: event:/Weapon/Pistol/PistolReload
+  Guid:
+    Data1: 977247926
+    Data2: 1330706782
+    Data3: 1752777652
+    Data4: -1154381000
+  Banks:
+  - {fileID: -1526987053754343788}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8e7ae5c0-29cd-4ad1-972d-9cdf4057d708}">
+		<property name="assetPath">
+			<value>Weapon/Rifle/d42ea6_FN_SCAR_Reload_Sound_Effect.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.063673469387755</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{32fb3d87-53b4-4338-9777-f2af59005a4c}</destination>
+		</relationship>
+	</object>
+</objects>

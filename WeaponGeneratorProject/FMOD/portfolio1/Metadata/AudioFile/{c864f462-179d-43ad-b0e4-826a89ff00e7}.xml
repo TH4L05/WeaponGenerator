@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c864f462-179d-43ad-b0e4-826a89ff00e7}">
+		<property name="assetPath">
+			<value>Weapon/Sniper/104631__DarkoZL__Barret50.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.4367708333333336</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{32fb3d87-53b4-4338-9777-f2af59005a4c}</destination>
+		</relationship>
+	</object>
+</objects>
