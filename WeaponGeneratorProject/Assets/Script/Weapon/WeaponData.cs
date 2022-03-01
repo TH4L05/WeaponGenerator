@@ -113,5 +113,3 @@ public class WeaponData : ScriptableObject
         ammoAmount = dataRandom.ammoAmount;
     }
 }
-
-
