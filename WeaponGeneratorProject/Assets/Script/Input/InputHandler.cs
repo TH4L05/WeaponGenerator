@@ -252,7 +252,6 @@ public class InputHandler : MonoBehaviour
 
     #endregion InputHandle
 
-
     #region InputActionsStatus and Pause
 
     public void EnableInputActions(bool enable)

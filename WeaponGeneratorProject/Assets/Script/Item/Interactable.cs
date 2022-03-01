@@ -25,7 +25,7 @@ public class Interactable : MonoBehaviour
         Debug.Log("TEST EVENT TRIGGERED");
     }
 
-    public void EventSpawnAweapon()
+    public void EventSpawnNewWeapon()
     {
         Debug.Log(specialTransforms[0].position);
         var weapon = LootSystem.GenerateWeaponLoot(amount, specialTransforms[0].position);

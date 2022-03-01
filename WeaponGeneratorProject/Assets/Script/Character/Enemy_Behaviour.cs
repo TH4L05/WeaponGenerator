@@ -6,7 +6,6 @@ public class Enemy_Behaviour : MonoBehaviour
 {
     protected enum EnemyState
     {
-        Invalid = -1,
         Idle,
         MoveToTarget,
         MoveToPosition,
@@ -23,6 +22,7 @@ public class Enemy_Behaviour : MonoBehaviour
     [SerializeField] protected bool manualState;
     [SerializeField] protected Enemy enemy;
     [SerializeField] protected EnemyState state;
+    [SerializeField] protected EnemyState laststate;
     [SerializeField] protected Transform target;
     [SerializeField] protected Transform randomTargetTransform;
     private bool moveToPosition;
@@ -59,12 +59,13 @@ public class Enemy_Behaviour : MonoBehaviour
     {
         var activeState = StateCheck();
 
+        if (state == laststate) return;
+        laststate = activeState;
+
         switch (activeState)
         {
-            case EnemyState.Invalid:
-                Debug.Log("Enemy has an Invalid State");
-                break;
             case EnemyState.Idle:
+            default:
                 StateIdle();
                 break;
             case EnemyState.MoveToTarget:
@@ -82,8 +83,6 @@ public class Enemy_Behaviour : MonoBehaviour
             case EnemyState.Death:
                 StateDeath();
                 break;
-            default:
-                return;
         }
     }
 

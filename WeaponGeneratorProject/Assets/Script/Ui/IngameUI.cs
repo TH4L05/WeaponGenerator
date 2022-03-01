@@ -74,7 +74,7 @@ public class IngameUI : MonoBehaviour
         weaponInfo.gameObject.SetActive(active);
         if (obj == null) return;
         var weapon = obj.GetComponentInChildren<Weapon>();
-        weaponInfo.UpdateSlot(weapon.Data, weapon.Icon, weapon.Frame);
+        weaponInfo.UpdateSlot(weapon.Data, weapon.Icon);
     }
 
     private void DisableCrosshair()

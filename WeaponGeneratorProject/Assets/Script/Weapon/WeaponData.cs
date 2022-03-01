@@ -47,12 +47,11 @@ public class WeaponData : ScriptableObject
     public float reloadTime;
     public Color rarityColor;
 
-
     /// <summary>
-    /// predefined WeaponData
+    /// set data with predefined WeaponData
     /// </summary>
     /// <param name="data"></param>
-    public void Setup(WeaponData data)
+    public void SetData(WeaponData data)
     {
         name = data.name;
         level = data.level;
@@ -65,7 +64,7 @@ public class WeaponData : ScriptableObject
     }
 
     /// <summary>
-    /// manuell WeaponData
+    /// set data with manuell WeaponData
     /// </summary>
     /// <param name="name"></param>
     /// <param name="icon"></param>
@@ -75,7 +74,7 @@ public class WeaponData : ScriptableObject
     /// <param name="damamgeMin"></param>
     /// <param name="damamgeMax"></param>
     /// <param name="speed"></param>
-    public void Setup(string name, WeaponType type, ShootType stype, Rarity rarity, float damageMin, float damageMax, float rateOfFire)
+    public void SetData(string name, WeaponType type, ShootType stype, Rarity rarity, float damageMin, float damageMax, float rateOfFire)
     {        
         this.name = name;
         this.type = type;
@@ -84,32 +83,5 @@ public class WeaponData : ScriptableObject
         this.damageMin = damageMin;
         this.damageMax = damageMax;
         this.rateOfFire = rateOfFire;
-    }
-
-    /// <summary>
-    /// Random WeaponData
-    /// </summary>
-    /// <param name="randomWeaponData"></param>
-    /// <param name="rarityTable"></param>
-    /// <param name="icon"></param>
-    /// <param name="frame"></param>
-    public void Setup(WeaponType type, int[] rarityTable)
-    {
-        var randData = new WeaponDataRandom(rarityTable);
-        var dataRandom = randData.NewRandomData(type);
-
-        name = dataRandom.name;
-        level = dataRandom.level;
-        this.type = type;
-        sType = dataRandom.sType;
-        rarityValue = dataRandom.rarityValue;
-        damageMin = dataRandom.damageMin;
-        damageMax = dataRandom.damageMax;
-        rateOfFire = dataRandom.rateOfFire;
-        accuracy = dataRandom.accuracy;
-        accuracyDropPerShot = dataRandom.accuracyDropPerShot;
-        accuracyRecoverRate = dataRandom.accuracyRecoverRate;
-        ammoCapacity = dataRandom.ammoCapacity;
-        ammoAmount = dataRandom.ammoAmount;
     }
 }

@@ -29,7 +29,7 @@ public class Slot : MonoBehaviour
     }
     #endregion UnityFunctions
 
-    public void UpdateSlot(WeaponData data, Sprite icon, Sprite frame)
+    public void UpdateSlot(WeaponData data, Sprite icon)
     {
         slotImage.color = data.rarityColor;
         weaponImage.sprite = icon;

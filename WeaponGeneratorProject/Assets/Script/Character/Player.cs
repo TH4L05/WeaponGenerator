@@ -89,7 +89,6 @@ public class Player : Character
                 return;
             }
 
-
             switch (ItemOnFocus.Data.ItemType)
             {
                 case ItemType.Default:

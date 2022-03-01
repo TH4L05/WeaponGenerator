@@ -8,28 +8,28 @@ public class Weapon :MonoBehaviour
 {
     #region SerializedFields
 
+    [Header("Data")]
     [SerializeField] private WeaponData data;
+    [SerializeField] private AudioEventList weaponAudioEvents;
+
+    [Header("Parameters")]
     [SerializeField] private Sprite icon;
-    [SerializeField] private Sprite frame;
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform projectileSpawn;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform raycastStart;
-    [SerializeField] private AudioEventList weaponAudioEvents;
-
+    
     [Header("VFX")]
     [SerializeField] private GameObject impactVFX;
     [SerializeField] private ParticleSystem muzzleflash;
     [SerializeField] private List<GameObject> rarityParticles = new List<GameObject>();
     
-
     #endregion
 
     #region Fields
 
     public WeaponData Data => data;
     public Sprite Icon => icon;
-    public Sprite Frame => frame;
     public List<GameObject> RarityParticles => rarityParticles;
 
     private bool canShoot = true;
@@ -63,25 +63,20 @@ public class Weapon :MonoBehaviour
 
     #endregion UnityFunctions
 
+    #region Set
+
+    public void SetData(WeaponData weaponData)
+    {
+        data = weaponData;
+    }
+
     public void SetRarityParticle(bool active)
     {
         int indx = (int)data.rarityValue;
         rarityParticles[indx].SetActive(active);
     }
 
-    public void NewWeaponDataInstance()
-    {
-        data = ScriptableObject.CreateInstance<WeaponData>();
-    }
-
-    public void UpdateAmmoAmount()
-    {
-        if (data.ammoAmount != 0)
-        {
-            data.ammoAmount--;
-            Game.instance.player.WeaponController.UpdateAmmoUI(data.ammoAmount);
-        }
-    }
+    #endregion
 
     #region Zoom
 
@@ -133,6 +128,15 @@ public class Weapon :MonoBehaviour
     #endregion
 
     #region Shooting
+
+    public void UpdateAmmoAmount()
+    {
+        if (data.ammoAmount != 0)
+        {
+            data.ammoAmount--;
+            Game.instance.player.WeaponController.UpdateAmmoUI(data.ammoAmount);
+        }
+    }
 
     public void ResetShootTimer()
     {

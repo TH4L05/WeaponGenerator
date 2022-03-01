@@ -7,7 +7,7 @@ public class Generator : MonoBehaviour
 {
     [Header("References")]
     public WeaponController weaponController;
-    public GeneratorData data;
+    public GeneratorData generatorData;
     private WeaponDataRandom randData;
     public GameObject generatorView;
 
@@ -23,7 +23,7 @@ public class Generator : MonoBehaviour
     private void Start()
     {
         tempweaponlist = new List<GameObject>();
-        randData = new WeaponDataRandom();
+        
     }
 
     public void GenerateOnClick()
@@ -46,7 +46,8 @@ public class Generator : MonoBehaviour
 
     public void GenerateNewRandomWeapon()
     {
-        //Set Random WeaponType
+        //Set Random WeaponType       
+        randData = new WeaponDataRandom(generatorData.rarityTable);
         var type = randData.GetRandomType();
  
         //Instancicate WeaponPrefab
@@ -55,7 +56,7 @@ public class Generator : MonoBehaviour
         
         try
         {
-            newWeapon = Instantiate(data.weaponPrefabs[(int)type]);
+            newWeapon = Instantiate(generatorData.weaponPrefabs[(int)type]);
             Debug.Log(newWeapon);
         }
         catch (Exception)
@@ -76,12 +77,13 @@ public class Generator : MonoBehaviour
 
 
         //Weapon Setup
-        var weapon = newWeapon.GetComponentInChildren<Weapon>();               
-        weapon.NewWeaponDataInstance();
-        weapon.Data.Setup(type, data.rarityTable);
+        var weapon = newWeapon.GetComponentInChildren<Weapon>();
+        var newWeaponData = randData.NewRandomData(type);
 
         //Set Rarity color
-        weapon.Data.rarityColor = data.frameColors[(int)weapon.Data.rarityValue];
+        newWeaponData.rarityColor = generatorData.frameColors[(int)newWeaponData.rarityValue];
+
+        weapon.SetData(newWeaponData);
 
         //Set Rarity Particle
         weapon.SetRarityParticle(true);
@@ -91,46 +93,12 @@ public class Generator : MonoBehaviour
 
         //Temp
         tempweaponlist.Add(newWeapon);
-
-        
-    }
-
-    public void GenerateNewWeaponWithData()
-    {
-        //Set Random WeaponType
-        var type = randData.GetRandomType();
-
-        //Instancicate WeaponPrefab
-        GameObject newWeapon = null;
-        try
-        {
-            newWeapon = Instantiate(data.weaponPrefabs[(int)type]);
-        }
-        catch (Exception)
-        {
-            Debug.Log("Impossible to create Weapon");
-        }
-
-        //Weapon Setup
-        var weapon = newWeapon.GetComponentInChildren<Weapon>();
-        weapon.NewWeaponDataInstance();
-        
-        //Set Rarity color
-        weapon.Data.rarityColor = data.frameColors[(int)weapon.Data.rarityValue];
-
-        //Set Rarity particle
-        weapon.RarityParticles[(int)weapon.Data.rarityValue].SetActive(true);
-
-        //Set GameObject Name
-        newWeapon.name = weapon.Data.rarityValue.ToString() + weapon.Data.type.ToString() + "-" + weapon.Data.name;
-
-        //Temp
-        tempweaponlist.Add(newWeapon);
+        randData = null;
     }
 
     public void UpdateGeneratorSlot(int indx, Weapon weapon)
     {
-        generatorSlots[indx].UpdateSlot(weapon.Data, weapon.Icon, weapon.Frame);
+        generatorSlots[indx].UpdateSlot(weapon.Data, weapon.Icon);
     }
 
     public void DestroyTempWeapon(int indx)
