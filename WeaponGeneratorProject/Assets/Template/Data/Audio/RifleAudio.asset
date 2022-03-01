@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c6cf3b358c1ef49b657119c08f2656, type: 3}
+  m_Name: RifleAudio
+  m_EditorClassIdentifier: 
+  audioEvents:
+  - eventName: Shoot
+    eventPath:
+      Guid:
+        Data1: 252117256
+        Data2: 1186804193
+        Data3: 282409862
+        Data4: 1858992218
+      Path: event:/Weapon/Rifle/RifleShot
+  - eventName: Reload
+    eventPath:
+      Guid:
+        Data1: -1432542038
+        Data2: 1155971246
+        Data3: 1920348315
+        Data4: 709955556
+      Path: event:/Weapon/Rifle/RifleReload
