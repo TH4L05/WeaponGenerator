@@ -5398,7 +5398,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264335419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.5, y: 0.03, z: 51}
+  m_LocalPosition: {x: 52, y: 0.03, z: 114}
   m_LocalScale: {x: 2, y: 0.25, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7351,8 +7351,8 @@ MonoBehaviour:
   inputHandler: {fileID: 619896900}
   weaponGenerator: {fileID: 1511004644}
   RandomTargetPosition: {fileID: 1035740626}
-  roomTransform: {fileID: 0}
-  miniRoomTransform: {fileID: 0}
+  roomTransform: {fileID: 1009468779685317860}
+  miniRoomTransform: {fileID: 2097188775}
   gameRoom: {fileID: 2097188777}
   disableCursorOnStart: 1
   spawner:
@@ -11364,7 +11364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666565584}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 45, y: 1.06, z: 52.5}
+  m_LocalPosition: {x: 38, y: 1.06, z: 118}
   m_LocalScale: {x: 2, y: 0.25, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -82708,7 +82708,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130695975}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 55.87, y: 4.5, z: 52.18}
+  m_LocalPosition: {x: 47, y: 4.5, z: 115}
   m_LocalScale: {x: 2, y: 0.25, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
