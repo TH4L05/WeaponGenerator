@@ -26,6 +26,21 @@ public class Player : Character
 
     #endregion
 
+    #region UnityFunctions
+
+    private void OnDestroy()
+    {
+        GameEvents.UpdatePlayerExperience -= UpdateExp;
+        Weapon.ZoomCamera -= ZoomCamera;
+    }
+
+    private void LateUpdate()
+    {
+        DrawInteractableRayCast();
+    }
+
+    #endregion
+
     protected override void StartSetup()
     {
         if (levelSystem != null) levelSystem.LevelUP += LevelUp;
@@ -33,12 +48,6 @@ public class Player : Character
         Weapon.ZoomCamera += ZoomCamera;
         data.level = 1;
         base.StartSetup();
-    }
-
-    private void OnDestroy()
-    {
-        GameEvents.UpdatePlayerExperience -= UpdateExp;
-        Weapon.ZoomCamera -= ZoomCamera;
     }
 
     private void ZoomCamera(bool zoom)
@@ -51,11 +60,6 @@ public class Player : Character
         {
             if (animatorCamera != null) animatorCamera.Play("ZoomOut");
         }
-    }
-
-    private void LateUpdate()
-    {
-        DrawInteractableRayCast();
     }
 
     public void DrawInteractableRayCast()
@@ -150,7 +154,6 @@ public class Player : Character
         GameEvents.UpdatePlayerExperience -= UpdateExp;
         base.Death();
     }
-
 
     #region HookSystemTest
 
