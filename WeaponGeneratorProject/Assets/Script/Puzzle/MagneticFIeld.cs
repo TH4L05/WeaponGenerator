@@ -49,7 +49,7 @@ public class MagneticFIeld : MonoBehaviour
         var item = collider.GetComponent<Item>();
         if (item == null) return;
 
-        if (item.Data.isMagnetic)
+        if (item.Data.IsMagnetic)
         {
             if (objectsInField.Count == 0)
             {

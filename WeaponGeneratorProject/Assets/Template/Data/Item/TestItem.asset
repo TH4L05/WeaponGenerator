@@ -17,3 +17,4 @@ MonoBehaviour:
   isMovable: 1
   isMagnetic: 1
   isInteractable: 0
+  infoText: Press E to Push

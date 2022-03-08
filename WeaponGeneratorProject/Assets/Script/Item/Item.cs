@@ -14,11 +14,6 @@ public class Item : MonoBehaviour , IDamageable
     {
         interactable = GetComponent<Interactable>();
         rb = GetComponent<Rigidbody>();
-
-        /*if (!data.isMovable)
-        {
-            rb.isKinematic = true;
-        }*/
     }
 
     public void Interact()
@@ -28,7 +23,7 @@ public class Item : MonoBehaviour , IDamageable
 
     public void TakeDamage(float damage)
     {
-        if (!data.isDamagable) return;
+        if (!data.IsDamagable) return;
         Debug.Log($"{transform.name} get hit and takes damage of {damage}");
     }
 }

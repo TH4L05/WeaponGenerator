@@ -11,7 +11,7 @@ public class PushObjects : MonoBehaviour
         var item = hit.collider.GetComponent<Item>();
 
         if (item == null) return;
-        if (!item.Data.isMovable) return;
+        if (!item.Data.IsMovable) return;
 
         PushObject(hit);
     }

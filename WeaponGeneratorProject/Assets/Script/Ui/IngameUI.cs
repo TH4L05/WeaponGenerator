@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class IngameUI : MonoBehaviour
 {
+    #region Fields
+
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private TextMeshProUGUI ammoText;
     [SerializeField] private TextMeshProUGUI ammoCapacityText;
@@ -12,7 +14,10 @@ public class IngameUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI infoText;
     [SerializeField] private Slot weaponInfo;
     [SerializeField] private GameObject crosshair;
-    public string[] infoTexts;
+
+    #endregion
+
+    #region UnityFunctions
 
     private void Awake()
     {
@@ -38,17 +43,14 @@ public class IngameUI : MonoBehaviour
         Weapon.EnableCrosshair -= EnableCrosshair;
     }
 
-    private void ShowInfoText(bool status, int textid)
+    #endregion
+
+    #region Info
+
+    private void ShowInfoText(bool active, string infoText)
     {
-        infoText.gameObject.SetActive(status);
-        if (textid > infoTexts.Length)
-        {
-            infoText.text = "Wrong Infotext ID";
-        }
-        else
-        {
-            infoText.text = infoTexts[textid];
-        }                
+        this.infoText.gameObject.SetActive(active);
+        this.infoText.text = infoText;             
     }
 
     private void UpdateLevelText()
@@ -70,12 +72,16 @@ public class IngameUI : MonoBehaviour
     }
 
     private void ShowWeaponInfo(bool active, GameObject obj)
-    {       
-        weaponInfo.gameObject.SetActive(active);
+    {
         if (obj == null) return;
+        weaponInfo.gameObject.SetActive(active);      
         var weapon = obj.GetComponentInChildren<Weapon>();
         weaponInfo.UpdateSlot(weapon.Data, weapon.Icon);
     }
+
+    #endregion
+
+    #region Crosshair
 
     private void DisableCrosshair()
     {
@@ -87,4 +93,5 @@ public class IngameUI : MonoBehaviour
         if (crosshair != null) crosshair.SetActive(true);
     }
 
+    #endregion
 }

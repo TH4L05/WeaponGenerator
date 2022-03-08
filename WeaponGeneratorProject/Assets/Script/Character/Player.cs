@@ -81,55 +81,29 @@ public class Player : Character
             if (ItemOnFocus == null)
             {
                 InteractableIsOnFocus = false;
-                GameEvents.ShowInfoText?.Invoke(false, 0); 
+                GameEvents.ShowInfoText?.Invoke(false, ""); 
                 GameEvents.ShowWeaponInfo?.Invoke(false, null);
                 return;
             }
-            else if(!ItemOnFocus.Data.isInteractable)
+            
+            if(ItemOnFocus.Data.IsInteractable)
             {
-                InteractableIsOnFocus = false;
-                GameEvents.ShowInfoText?.Invoke(false, 0);
-                GameEvents.ShowWeaponInfo?.Invoke(false, null);
-                return;
-            }
+                InteractableIsOnFocus = true;
+                GameEvents.ShowInfoText?.Invoke(true, ItemOnFocus.Data.InfoText);
 
-            switch (ItemOnFocus.Data.ItemType)
-            {
-                case ItemType.Default:
-                    InteractableIsOnFocus = true;
-                    GameEvents.ShowInfoText?.Invoke(true, 1);
-                    break;
-
-                case ItemType.Button:
-                    InteractableIsOnFocus = true;
-                    GameEvents.ShowInfoText?.Invoke(true, 3);
-                    break;
-
-                case ItemType.Money:
-                    InteractableIsOnFocus = true;
-                    break;
-
-                case ItemType.Weapon:
-                    InteractableIsOnFocus = true;
-                    var weapon = hit.collider.GetComponentInChildren<Weapon>();
-                    GameEvents.ShowInfoText?.Invoke(true, 2);                  
+                if (ItemOnFocus.Data.ItemType == ItemType.Weapon)
+                {
                     GameEvents.ShowWeaponInfo?.Invoke(true, ItemOnFocus.gameObject);
-                    break;
-
-                default:
-                    InteractableIsOnFocus = false;
-                    ItemOnFocus = null;
-                    GameEvents.ShowInfoText?.Invoke(false, 0);
-                    GameEvents.ShowWeaponInfo?.Invoke(false, null);
-                    break;
-            }
+                }               
+                return;
+            }           
         }
         else
         {
             InteractableIsOnFocus = false;
             ItemOnFocus = null;
             GameEvents.ShowWeaponInfo?.Invoke(false, null);
-            GameEvents.ShowInfoText?.Invoke(false, 0);           
+            GameEvents.ShowInfoText?.Invoke(false, "");           
         }
     }
 

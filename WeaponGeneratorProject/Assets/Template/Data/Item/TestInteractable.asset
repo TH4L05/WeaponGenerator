@@ -17,3 +17,4 @@ MonoBehaviour:
   isMovable: 0
   isMagnetic: 0
   isInteractable: 1
+  infoText: TestEvent
